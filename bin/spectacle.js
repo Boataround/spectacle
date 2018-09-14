@@ -25,6 +25,7 @@ program.version(package.version)
     .option('-l, --logo-file <file>', 'specify a custom logo file (default: null)', String, null)
     .option('-c, --config-file <file>', 'specify a custom configuration file (default: app/lib/config.js)')
     .option('-q, --quiet', 'Silence the output from the generator (default: false)')
+    .option('-r, --remove-hidden', 'Remove hidden entities from documentation (default: false)')
     // .option('-f, --spec-file <file>', 'the input OpenAPI/Swagger spec file (default: test/fixtures/petstore.json)', String, 'test/fixtures/petstore.json')
     .parse(process.argv)
 
