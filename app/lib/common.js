@@ -111,7 +111,7 @@ var common = {
     if (!options.depth)
       options.depth = 0;
     options.depth++;
-    if (options.depth > 100) {
+    if (options.depth > 500) {
       // console.log('max depth', ref)
       return;
     }
