@@ -124,7 +124,7 @@ var common = {
     // /usr/local/bin/node bin/spectacle -d test/fixtures/billing.yaml
     if (!options.refsSeen) {
       options.refsSeen = [];
-      
+    }
     if (!options.depth)
       options.depth = 0;
     options.depth++;
