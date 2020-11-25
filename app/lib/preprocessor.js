@@ -1,5 +1,6 @@
 var path = require('path'),
-  _ = require('lodash')
+  _ = require('lodash'),
+  specFilter = require('./spec-filter');
 
 var httpMethods = ['get', 'put', 'post', 'delete', 'options', 'head', 'patch', '$ref'];
 
@@ -15,7 +16,7 @@ module.exports = function(options, specData) {
   // Don't normalize x-spec-path to posix path. It must be a platoform specific.
   specData["x-spec-path"] = options.specFile;
 
-  var copy = _.cloneDeep(specData)
+  var copy = specFilter(options, specData)
   var tagsByName = _.keyBy(copy.tags, 'name')
 
   copy.tags = copy.tags || [];
