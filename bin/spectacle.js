@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var program = require('commander'),
+var {program} = require('commander'),
     package = require('../package'),
     spectacle = require('../index.js')
 
